@@ -3,19 +3,21 @@
 A Python-based, menu-driven backup tool for Linux that automates folder backups, allows restoration, logs actions, and can schedule daily backups. Ideal for personal use, businesses, or anyone managing important files.
 
 ## Features
+
 - Backup any folder on your Linux machine
 - Optional file type filters (e.g., `.pdf, .mp4`)
 - Compress backups to save storage space
 - Restore backups easily
 - View backup logs
 - Cleanup old backups automatically
-- Schedule daily backups using Python `schedule` module
+- Schedule daily backups using the Python `schedule` module
 - Error handling for missing folders or permissions
 
 ## Installation
+
 ```bash
 # Clone the repository
-git clone git@github.com:Lemi897/auto-backup.git
+git clone https://github.com/Lemi897/auto-backup.git
 cd auto-backup
 
 # Make the script executable
@@ -23,19 +25,24 @@ chmod +x auto_backup.py
 
 # Install dependencies
 python3 -m pip install --user schedule
+
 # Or use a virtual environment
 python3 -m venv venv
 source venv/bin/activate
 pip install schedule
+```
 
-Usage
+## Usage
 
 Run the script:
 
+```bash
 ./auto_backup.py
+```
 
 Follow the menu:
 
+```
 === Auto Backup System ===
 1. Backup a folder
 2. Restore a backup (copy files back)
@@ -43,31 +50,23 @@ Follow the menu:
 4. Cleanup old backups
 5. Schedule daily backup
 6. Exit
+```
 
-    For backups: enter the folder path and optionally specify file types
+- For backups, enter the folder path and optionally specify file types
+- Choose whether to compress the backup (y/n)
+- Backups are stored in `~/automation-projects/backups`
+- Logs are stored in `~/automation-projects/backups/logs`
 
-    Choose whether to compress backup → y/n
+## Highlights
 
-    Backups are stored in ~/automation-projects/backups
+- Menu-driven interface for easy use
+- Compression option for saving space
+- Scheduled daily backups: automation without intervention
+- Auto-logs to track all actions
+- Cleanup of old backups keeps storage organized
+- Handles errors gracefully instead of crashing
 
-    Logs are stored in ~/automation-projects/backups/logs
+## Requirements
 
-Wow Features
-
-    Menu-driven interface for easy use
-
-    Compression option for saving space
-
-    Scheduled daily backups → automation without intervention
-
-    Auto-logs to track all actions
-
-    Cleanup old backups → organized storage
-
-    Handles errors gracefully → no crashes
-
-Requirements
-
-    Python 3.x
-
-    schedule module (pip install schedule)
+- Python 3.x
+- `schedule` module (`pip install schedule`)
